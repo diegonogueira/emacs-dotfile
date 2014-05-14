@@ -1,1 +1,1 @@
-("~/Documents/scala/play-2.2.3/projects/preco-amigo/" "~/Documents/scala/play-2.2.2/projects/lojinha/" "~/.emacs.d/" "~/Documents/v2v/projects/hsbc/" "~/Documents/v2v/projects/v2v5/")
+("~/.emacs.d/" "~/Documents/scala/play-2.2.3/projects/preco-amigo/" "~/Documents/scala/play-2.2.2/projects/lojinha/" "~/Documents/v2v/projects/hsbc/" "~/Documents/v2v/projects/v2v5/")
