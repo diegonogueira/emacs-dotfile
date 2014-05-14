@@ -1,0 +1,7 @@
+#name : each do |e| ... end
+#group : Enumerables
+# key: eacb
+# --
+each do |${e}|
+  $0
+end

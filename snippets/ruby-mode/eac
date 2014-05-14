@@ -1,0 +1,5 @@
+#name : each { |e| ... }
+#group : Enumerables
+# key: eac
+# --
+each { |${e}| $0 }
