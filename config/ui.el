@@ -24,5 +24,5 @@
 (global-linum-mode 1)
 (setq linum-format "%d ")
 
-;; Set Monaco as default font.
-(set-default-font "Monaco-14")
+;; Set Monaco as default font on mac
+(if (eq system-type "darwin") (set-default-font "Monaco-14"))
