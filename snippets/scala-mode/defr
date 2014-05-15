@@ -1,0 +1,4 @@
+#name : def f: T = ...
+# key: defr
+# --
+def ${1:name}: ${2:return} = $0

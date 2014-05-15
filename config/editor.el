@@ -22,3 +22,9 @@
 
 ;; Delete the selection with a keypress.
 (delete-selection-mode t)
+
+;; Change mac command key
+(if (eq system-type 'darwin)
+		(progn
+			(setq mac-command-modifier 'meta)
+			(setq mac-option-modifier 'super)))

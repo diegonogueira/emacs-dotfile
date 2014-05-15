@@ -1,0 +1,6 @@
+#name : map { val => ... }.getOrElse(...)
+# key: mape
+# --
+map { ${1:var} =>
+  $0
+}.getOrElse($2)

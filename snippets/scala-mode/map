@@ -1,0 +1,6 @@
+#name : map { val => ... }
+# key: map
+# --
+map { $1 =>
+  $0
+}

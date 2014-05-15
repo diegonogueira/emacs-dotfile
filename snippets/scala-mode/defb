@@ -1,0 +1,6 @@
+#name : def f = { ... }
+# key: defb
+# --
+def ${1:name} = {
+  $0
+}
