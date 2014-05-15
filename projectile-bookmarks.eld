@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/Documents/v2v/projects/v2v5/" "~/Documents/v2v/projects/hsbc/" "~/Documents/scala/play-2.2.3/projects/preco-amigo/" "~/Documents/scala/play-2.2.2/projects/lojinha/")
