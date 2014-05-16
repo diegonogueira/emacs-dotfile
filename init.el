@@ -4,6 +4,7 @@
 (load-file "~/.emacs.d/config/common.el")
 (load-file "~/.emacs.d/config/ui.el")
 (load-file "~/.emacs.d/config/editor.el")
+(load-file "~/.emacs.d/config/funcs.el")
 
 (message "All configurations successfully loaded.")
 (custom-set-variables
