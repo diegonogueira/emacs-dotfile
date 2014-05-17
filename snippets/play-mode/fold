@@ -1,0 +1,11 @@
+# name: form.bindFromRequest.fold(formWithErrors => ... , success => ... )
+# key: fold
+# --
+${1:form}.bindFromRequest.fold(
+  formWithErrors => BadRequest(${2:view}(formWithErrors)),
+	${3:success} => {
+    $0
+    Redirect(routes.${4:controller}).flashing("${5:notice}" -> ${6:message})
+  }
+
+)
