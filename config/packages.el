@@ -22,6 +22,10 @@
 (unless (package-installed-p 'slim-mode)
   (package-install 'slim-mode))
 
+;; yaml-mode
+(unless (package-installed-p 'yaml-mode)
+	(package-install 'yaml-mode))
+
 ;; flymake-ruby for on the fly syntax checking
 (unless (package-installed-p 'flymake-ruby)
   (package-install 'flymake-ruby))
@@ -31,6 +35,7 @@
 (unless (package-installed-p 'scala-mode2)
   (package-refresh-contents) (package-install 'scala-mode2))
 
+;; multiple-cursors
 (unless (package-installed-p 'multiple-cursors)
   (package-install 'multiple-cursors))
 (global-set-key (kbd "C-c m l l") 'mc/edit-lines)
