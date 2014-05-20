@@ -3,7 +3,7 @@
 ;; Marmalade
 (require 'package)
 (add-to-list 'package-archives
-    '("marmalade" .
+'("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
@@ -38,26 +38,11 @@
 ;; multiple-cursors
 (unless (package-installed-p 'multiple-cursors)
   (package-install 'multiple-cursors))
-(global-set-key (kbd "C-c m l l") 'mc/edit-lines)
-(global-set-key (kbd "C-c m l b") 'mc/edit-beginnings-of-lines)
-(global-set-key (kbd "C-c m l e") 'mc/edit-ends-of-lines)
-(global-set-key (kbd "C-c m a a") 'mc/mark-all-like-this)
-(global-set-key (kbd "C-c m a r") 'mc/mark-all-in-region)
-(global-set-key (kbd "C-c m e") 'mc/mark-more-like-this-extended)
-(global-set-key (kbd "C-c m t") 'mc/mark-sgml-tag-pair)
-(global-set-key (kbd "C-c m SPC") 'set-rectangular-region-anchor)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-{") 'mc/skip-to-next-like-this)
-(global-set-key (kbd "C-}") 'mc/skip-to-previous-like-this)
 
 ;; Projectile is a project interaction library for Emacs
 (unless (package-installed-p 'projectile)
   (package-install 'projectile))
 (projectile-global-mode)
-;;(define-key projectile-mode-map [?\d-M] 'projectile-find-dir)
-;;(define-key projectile-mode-map [?\M-p] 'projectile-switch-project)
-;;(define-key projectile-mode-map [?\M-f] 'projectile-find-file)
 
 ;; Fuzzy matching for Emacs ... a la Sublime Text.
 (unless (package-installed-p 'flx-ido)

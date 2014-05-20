@@ -1,5 +1,18 @@
 (message "- editor configurations...")
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((encoding . utf-8)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
 ;; Set UTF-8 as default coding system.
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -29,9 +42,55 @@
 			(setq mac-command-modifier 'meta)
 			(setq mac-option-modifier 'super)))
 
+;; Open recents files
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
+;; Enable delete trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Disable backup and auto save.
+(setq backup-inhibited t)
+(setq auto-save-default nil)
+
+;; Dired: reuse current buffer by pressing 'a'.
+(put 'dired-find-alternate-file 'disabled nil)
+
+;; Enable iBuffer
+(iswitchb-mode)
+
+;; Enable IDO.
+(require 'ido)
+(ido-mode t)
+
+;; Auto revert file
+;; Auto reload file when changed on another editor
+(global-auto-revert-mode 1)
+
+;; Load Zenburn color theme.
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'zenburn t)
+
+;; Disable startup screen.
+(setq inhibit-startup-screen t)
+
+;; Disable toolbar.
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+
+;; Disable scrolling.
+(scroll-bar-mode -1)
+
+;; Disable cursor blink.
+(blink-cursor-mode -1)
+
+;; Highlight the current line.
+(global-hl-line-mode +1)
+
+;; Show line numbers with an empty space after each number.
+(global-linum-mode 1)
+(setq linum-format "%d ")
+
+;; Set Monaco as default font on mac
+(if (eq system-type 'darwin) (set-default-font "Monaco-14"))
