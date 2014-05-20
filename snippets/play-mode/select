@@ -1,0 +1,9 @@
+# name: DB.withConnection { implicit conn => SQL(...).on(...).as(...)
+# key: select
+# --
+DB.withConnection { implicit c =>
+  SQL("SELECT ${1:*} FROM ${2:table} WHERE ${3:conditions}").on(
+    ${4:parameters}
+	).as($2.${5:singleOpt})
+	$0
+}

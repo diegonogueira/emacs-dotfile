@@ -1,0 +1,9 @@
+# name: DB.withConnection { implicit connection => SQL(...).on(...).executeInsert() }
+# key: insert
+# --
+DB.withConnection { implicit connection =>
+  SQL("INSERT INTO ${1:table} (${2:fields}) VALUES (${3:values})").on(
+	  ${4:parameters}
+	).executeInsert()
+	$0
+}
