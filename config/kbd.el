@@ -18,6 +18,9 @@
 ;; iBuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; Sort selected lines
+(global-set-key (kbd "C-c s l") 'sort-lines)
+
 ;; Projectile shortcuts
 ;;(define-key projectile-mode-map [?\d-M] 'projectile-find-dir)
 ;;(define-key projectile-mode-map [?\M-p] 'projectile-switch-project)
