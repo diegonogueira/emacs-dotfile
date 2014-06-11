@@ -1,6 +1,0 @@
-#name : def f(arg: T) = { ... }
-# key: defab
-# --
-def ${1:name}(${2:args}) = {
-  $0
-}

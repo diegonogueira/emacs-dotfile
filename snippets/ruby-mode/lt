@@ -1,4 +1,0 @@
-# name: link_to ..., ...
-# key: lt
-# --
-link_to ${1:text}, ${2:url}_path

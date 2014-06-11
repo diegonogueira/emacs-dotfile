@@ -1,5 +1,0 @@
-#name : each_with_index { |e, index| ... }
-#group : Enumerables
-# key: eaci
-# --
-each_with_index { |${e}, index| $0 }

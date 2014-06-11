@@ -1,4 +1,0 @@
-# name: redirect_to ..., notice: ...
-# key: rtf
-# --
-redirect_to ${1:route}_path, ${2:notice}: $0

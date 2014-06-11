@@ -1,6 +1,0 @@
-# name: def f = Action { implicit request => ... }
-# key: defi
-# --
-def ${1:name} = ${2:Action} { implicit request =>
-  $0
-}

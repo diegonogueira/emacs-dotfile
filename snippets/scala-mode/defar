@@ -1,4 +1,0 @@
-# name : def f(arg: T): T = ...
-# key: defar
-# --
-def ${1:name}(${2:arg}): ${3:return} = $0

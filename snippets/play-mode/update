@@ -1,9 +1,0 @@
-# name: DB.withConnection { implicit connection => SQL(...).on(...).executeUpdate() }
-# key: update
-# --
-DB.withConnection { implicit connection =>
-  SQL("UPDATE ${1:table} SET ${2:fields} WHERE ${3:conditions}").on(
-	  ${4:parameters}
-	).executeUpdate()
-	$0
-}

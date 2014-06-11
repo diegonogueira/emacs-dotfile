@@ -1,6 +1,0 @@
-# name : def f(arg: T): T = { ... }
-# key: defarb
-# --
-def ${1:name}(${2:arg}): ${3:return} = {
-  $0
-}

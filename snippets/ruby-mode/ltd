@@ -1,4 +1,0 @@
-# name: link_to ..., ..., data: {...}
-# key: ltd
-# --
-link_to ${1:text}, ${2:url}_path, data: {${0:options}}
