@@ -17,6 +17,13 @@
   (package-install 'yasnippet))
 (setq yas-snippet-dirs (directory-files "~/.emacs.d/snippets" t))
 (yas-global-mode 1)
+(require 'dropdown-list)
+(setq yas-prompt-functions
+      '(yas-dropdown-prompt
+        yas-ido-prompt
+        yas-x-prompt
+        yas-completing-prompt
+        yas-no-prompt))
 
 ;; Syntax highlighting for Slim
 (unless (package-installed-p 'slim-mode)
