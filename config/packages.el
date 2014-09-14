@@ -12,12 +12,16 @@
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
+;; Dropdown-list
+;; (unless (package-installed-p 'dropdown-list)
+;;   (package-install 'dropdown-list))
+;; (require 'dropdown-list)
+
 ;; Yasnippet - A template system for Emacs
 (unless (package-installed-p 'yasnippet)
   (package-install 'yasnippet))
 (setq yas-snippet-dirs (directory-files "~/.emacs.d/snippets" t))
 (yas-global-mode 1)
-(require 'dropdown-list)
 (setq yas-prompt-functions
       '(yas-dropdown-prompt
         yas-ido-prompt
