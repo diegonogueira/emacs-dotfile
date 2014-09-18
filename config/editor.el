@@ -54,6 +54,7 @@
 ;; Disable backup and auto save.
 (setq backup-inhibited t)
 (setq auto-save-default nil)
+(setq create-lockfiles nil)
 
 ;; Dired: reuse current buffer by pressing 'a'.
 (put 'dired-find-alternate-file 'disabled nil)
@@ -94,6 +95,10 @@
 
 ;; automatically insert the right matching bracket
 (electric-pair-mode 1)
+
+;; Open in fullscreen mode
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 ;; Enable IDO.
 (require 'ido)
