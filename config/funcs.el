@@ -41,3 +41,9 @@ there's a region, all lines that region covers will be duplicated."
 	(if (and arg (not (= 1 arg))) (message "%d lines copied" arg)))
 ;; optional key binding
 (global-set-key "\C-c\C-k" 'copy-line)
+
+;; Switching Between Two Recently Used Buffers
+(defun switch-to-previous-buffer ()
+	(interactive)
+	(switch-to-buffer (other-buffer (current-buffer) 1)))
+(global-set-key (kbd "<C-tab>") 'switch-to-previous-buffer)

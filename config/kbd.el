@@ -18,6 +18,9 @@
 ;; iBuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; Ido buffer
+(global-set-key (kbd "M-1") 'ido-switch-buffer)
+
 ;; Sort selected lines
 (global-set-key (kbd "C-c s l") 'sort-lines)
 
