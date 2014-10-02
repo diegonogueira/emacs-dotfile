@@ -42,6 +42,7 @@
   (package-install 'flymake-ruby))
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))
 
 ;; Scala-mode2
 (unless (package-installed-p 'scala-mode2)
