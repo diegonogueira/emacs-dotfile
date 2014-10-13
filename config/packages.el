@@ -37,6 +37,10 @@
 (unless (package-installed-p 'yaml-mode)
 	(package-install 'yaml-mode))
 
+;; go-mode
+(unless (package-installed-p 'go-mode)
+	(package-install 'go-mode))
+
 ;; flymake-ruby for on the fly syntax checking
 (unless (package-installed-p 'flymake-ruby)
   (package-install 'flymake-ruby))
