@@ -111,3 +111,8 @@
 	(define-key ido-completion-map (kbd "C-n") 'ido-next-match)
 	(define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
 (add-hook 'ido-setup-hook 'ido-define-keys)
+
+;; Fix <dead-tilde> on ubuntu
+(if (eq system-type 'gnu/linux)
+		(progn
+			(require 'iso-transl)))
