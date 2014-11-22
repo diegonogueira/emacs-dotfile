@@ -47,3 +47,14 @@ there's a region, all lines that region covers will be duplicated."
 	(interactive)
 	(switch-to-buffer (other-buffer (current-buffer) 1)))
 (global-set-key (kbd "<C-tab>") 'switch-to-previous-buffer)
+
+;; Converts the current region lines to a single line, CSV value, separated by the provided separator string.
+(defun lines-to-csv (start end &optional arg)
+  (interactive "r\nP")
+  (let ((insertion
+         (mapconcat
+          (lambda (x) (format "%s" x))
+          (split-string (buffer-substring start end)) ", ")))
+    (delete-region start end)
+    (insert insertion)
+    (when arg (forward-char (length insertion)))))

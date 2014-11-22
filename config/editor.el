@@ -116,3 +116,6 @@
 (if (eq system-type 'gnu/linux)
 		(progn
 			(require 'iso-transl)))
+
+;; UPCASE region
+(put 'upcase-region 'disabled nil)

@@ -1,14 +1,14 @@
 (message "- packages configurations...")
 
-;; Marmalade
 (require 'package)
+
+;; Marmalade
 (add-to-list 'package-archives
 '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 ;; Melpa
-(require 'package)
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
@@ -67,6 +67,10 @@
 (ido-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
+
+;; REST Client
+(unless (package-installed-p 'restclient)
+  (package-refresh-contents) (package-install 'restclient))
 
 ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
